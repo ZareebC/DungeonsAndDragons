@@ -137,40 +137,46 @@ public class Adventurer{
     }
     public String deterClass(int[] arr){
         String detClass = "";
-        if(arr[0]> arr[2]){
+        //0 - Strength
+        //1 - Dexterity
+        //2 - Constitution
+        //3 - Intelligence
+        //4 - Wisdom
+        //5 - Charisma
+        if((arr[0]> arr[1]) && (arr[0] > arr[2]) && (arr[0]> arr[3]) && (arr[0]> arr[4]) && (arr[0]> arr[5]) && (arr[2]> arr[1]) && (arr[2]> arr[3]) && (arr[2]> arr[4]) && (arr[2]> arr[5])){
             detClass = "Barbarian";
         }
-        if(arr[5] > arr[1]){
+        if((arr[5]> arr[0]) && (arr[5]> arr[1]) && (arr[5]> arr[2]) && (arr[5]> arr[3]) && (arr[5]> arr[4]) && (arr[1]> arr[0]) && (arr[1]> arr[2]) && (arr[1]> arr[3]) && (arr[1] > arr[4])){
             detClass = "Bard";
         }
-        if(arr[4] > arr[5]){
+        if((arr[4]> arr[0]) && (arr[4]> arr[1]) && (arr[4]> arr[2]) && (arr[4]> arr[3]) && (arr[4]> arr[5]) && (arr[3]> arr[0]) && (arr[3]> arr[2]) && (arr[3]> arr[4]) && (arr[3] > arr[5])){
             detClass = "Cleric";
         }
-        if(arr[4] > arr[3]){
+        if((arr[4]> arr[0]) && (arr[4]> arr[1]) && (arr[4]> arr[2]) && (arr[4]> arr[3]) && (arr[4]> arr[5]) && (arr[3]> arr[0]) && (arr[3]> arr[2]) && (arr[3]> arr[4]) && (arr[3] > arr[5])){
             detClass = "Druid";
         }
-        if(arr[0] > arr[1]){
+        if((arr[0]> arr[1]) && (arr[0]> arr[2]) && (arr[0]> arr[3]) && (arr[0]> arr[4]) && (arr[0]> arr[5]) && (arr[1]> arr[2]) && (arr[1]> arr[3]) && (arr[1]> arr[4]) && (arr[1] > arr[5])){
             detClass = "Fighter";
         }
-        if(arr[1] > arr[4]){
+        if((arr[1]> arr[0]) && (arr[1]> arr[2]) && (arr[1]> arr[3]) && (arr[1]> arr[4]) && (arr[1]> arr[5]) && (arr[4]> arr[0]) && (arr[4]> arr[2]) && (arr[4]> arr[3]) && (arr[4] > arr[5])){
             detClass = "Monk";
         }
-        if(arr[0] > arr[5]){
+        if((arr[0]> arr[1]) && (arr[0]> arr[2]) && (arr[0]> arr[3]) && (arr[0]> arr[4]) && (arr[0]> arr[5]) && (arr[5]> arr[1]) && (arr[5]> arr[2]) && (arr[5]> arr[3]) && (arr[5] > arr[4])){
             detClass = "Paladin";
         }
-        if(arr[4] > arr[1]) {
+        if((arr[4]> arr[0]) && (arr[4]> arr[1]) && (arr[4]> arr[2]) && (arr[4]> arr[3]) && (arr[4]> arr[5]) && (arr[1]> arr[0]) && (arr[1]> arr[2]) && (arr[1]> arr[3]) && (arr[1] > arr[5])) {
             detClass = "Ranger";
         }
-        if(arr[1] > arr[3]){
+        if((arr[1]> arr[0]) && (arr[1]> arr[2]) && (arr[1]> arr[3]) && (arr[1]> arr[4]) && (arr[1]> arr[5]) && (arr[3]> arr[0]) && (arr[3]> arr[2]) && (arr[3]> arr[4]) && (arr[1] > arr[5])){
             detClass = "Rogue";
         }
-        if(arr[5] > arr[2]){
+        if((arr[5]> arr[0]) && (arr[5]> arr[1]) && (arr[5]> arr[2]) && (arr[5]> arr[3]) && (arr[5]> arr[4]) && (arr[2]> arr[1]) && (arr[2]> arr[3]) && (arr[2]> arr[4]) && (arr[2] > arr[5])){
             detClass = "Sorceror";
         }
-        if(arr[5] > arr[4]){
+        if((arr[5]> arr[0]) && (arr[5]> arr[1]) && (arr[5]> arr[2]) && (arr[5]> arr[3]) && (arr[5]> arr[4]) && (arr[4]> arr[0]) && (arr[4]> arr[1]) && (arr[4]> arr[2]) && (arr[4] > arr[3])){
             detClass = "Warlock";
         }
-        if(arr[3] > arr[4]){
+        if((arr[3]> arr[0]) && (arr[3]> arr[1]) && (arr[3]> arr[2]) && (arr[3]> arr[4]) && (arr[3]> arr[5]) && (arr[4]> arr[0]) && (arr[4]> arr[1]) && (arr[4]> arr[2]) && (arr[4] > arr[5])){
             detClass = "Wizard";
         }
         return detClass;
