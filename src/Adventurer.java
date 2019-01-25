@@ -13,6 +13,8 @@ public class Adventurer{
     private int charisma;
     private int[] attribute=new int[6];
     private int[] attributeMods = new int[6];
+    private int feet;
+    private int inch;
     public Adventurer(String name){
         this.name = name;
         AttributeArray();
@@ -264,6 +266,86 @@ public class Adventurer{
            age = randNumTwo(17, 65);
         }
         return age;
+    }
+    public int DeterHeight(){
+        if(race.equals("Dwarf")){
+            feet = randNumTwo(4,5);
+            if(feet == 4) {
+                inch = randNumTwo(1, 11);
+            }
+        }
+        else if(race.equals("Elf")){
+            feet = randNumTwo(5, 6);
+            if(feet == 5){
+                inch = randNumTwo(1, 11);
+            }
+            else{
+                inch = randNumTwo(1, 2);
+            }
+        }
+        else if(race.equals("Halfling")){
+            feet = randNumTwo(2, 3);
+            if(feet ==2){
+                inch = randNumTwo(6, 11);
+            }
+            else if(feet == 3){
+                inch = randNumTwo(1, 6);
+            }
+        }
+        else if(race.equals("Human")){
+            feet = randNumTwo(5, 6);
+            if(feet == 5){
+                inch = randNumTwo(1, 11);
+            }
+            else{
+                inch = randNumTwo(1, 6);
+            }
+        }
+        else if(race.equals("Dragonborn")){
+            feet = randNumTwo(6, 7);
+            if(feet == 6){
+                inch = randNumTwo(4, 11);
+            }
+            else{
+                inch = randNumTwo(1, 6);
+            }
+        }
+        else if(race.equals("Gnome")){
+            feet = randNumTwo(3, 4);
+            if(feet == 3){
+                inch = randNumTwo(1,11);
+            }
+            else{
+                inch = randNumTwo(1, 4);
+            }
+        }
+        else if(race.equals("Half-Elf")){
+            feet = randNumTwo(5, 6);
+            if(feet == 5){
+                inch = randNumTwo(1, 11);
+            }
+            else{
+                inch = randNumTwo(1, 4);
+            }
+        }
+        else if(race.equals("Half-Orc")){
+            feet = randNumTwo(5, 6);
+            if(feet == 5){
+                inch = randNumTwo(5, 11);
+            }
+            else{
+                inch = randNumTwo(1,10);
+            }
+        }
+        else{         //Teifling
+            feet = randNumTwo(5, 6);
+            if(feet == 5){
+                inch = randNumTwo(1, 11);
+            }
+            else{
+                inch = randNumTwo(1,6);
+            }
+        }
     }
     public String getName(){
         return name;
