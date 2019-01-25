@@ -20,7 +20,7 @@ public class Adventurer{
         this.classType = deterClass(attribute);
         this.level = level;
         this.hp = DeterHP(attributeMods);
-        this.age = age;
+        this.age = DeterAge(race);
         this.strength = strength;
         this.dexterity = dexterity;
         this.constitution = constitution;
@@ -33,7 +33,7 @@ public class Adventurer{
         return rand;
     }
     public int randNumTwo(int a, int b){
-        int rand = (int)(Math.random()*b)+	a;
+        int rand = (int)(Math.random()*b)+ a;
         return rand;
     }
     public int Sum(int x, int y, int z){
@@ -129,6 +129,9 @@ public class Adventurer{
             case 8:
                 race = "Teifling";
                 break;
+            case 9:
+                race = "Elf";
+                break;
         }
         return race;
     }
@@ -210,18 +213,51 @@ public class Adventurer{
         }
     }
     public int DeterHP(int[] arr){
+        int hitpoint = 0;
         if(classType.equals("Barbarian")){
-            hp = 10 + Die(4) + arr[2];
+            hitpoint = 10 + Die(4) + arr[2];
         }
         else if(classType.equals("Fighters") || classType.equals("Paladin") || classType.equals("Rangers")){
-           hp = 8 + Die(4) + arr[2];
+           hitpoint = 8 + Die(4) + arr[2];
         }
         else if(classType.equals("Sorceror") || classType.equals("Wizard")){
-            hp = 4 + Die(4) + arr[2];
+            hitpoint = 4 + Die(4) + arr[2];
         }
         else{
-            hp = 6 + Die(4) + arr[2];
+            hitpoint = 6 + Die(4) + arr[2];
         }
+        return hitpoint;
+    }
+    public int DeterAge(String raceAge){
+        int age = 0;
+        if(raceAge.equals("Dwarf")){
+            age = randNumTwo(50, 250);
+        }
+        else if(raceAge.equals("Elf")){
+            age = randNumTwo(100, 600);
+        }
+        else if(raceAge.equals("Halfling")){
+            age = randNumTwo(20, 120);
+        }
+        else if(raceAge.equals("Human")){
+            age = randNumTwo(17, 55);
+        }
+        else if(raceAge.equals("Dragonborn")){
+            age = randNumTwo(15, 60);
+        }
+        else if(raceAge.equals("Gnome")){
+            age = randNumTwo(40, 425);
+        }
+        else if(raceAge.equals("Half-Elf")){
+            age = randNumTwo(19, 140);
+        }
+        else if(raceAge.equals("Half-Orc")){
+            age = randNumTwo(14, 60);
+        }
+        else{               //Tiefling
+           age = randNumTwo(17, 65);
+        }
+        return age;
     }
     public String getName(){
         return name;
