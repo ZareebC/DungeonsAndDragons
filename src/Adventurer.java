@@ -1,7 +1,7 @@
 public class Adventurer{
     private String name;
     private String race;
-    private String classtype;
+    private String classType;
     private int level;
     private int hp;
     private int age;
@@ -17,9 +17,9 @@ public class Adventurer{
         this.name = name;
         AttributeArray();
         this.race = deterRace();
-        this.classtype = deterClass(attribute);
+        this.classType = deterClass(attribute);
         this.level = level;
-        this.hp = hp;
+        this.hp = DeterHP(attributeMods);
         this.age = age;
         this.strength = strength;
         this.dexterity = dexterity;
@@ -209,6 +209,20 @@ public class Adventurer{
             }
         }
     }
+    public int DeterHP(int[] arr){
+        if(classType.equals("Barbarian")){
+            hp = 10 + Die(4) + arr[2];
+        }
+        else if(classType.equals("Fighters") || classType.equals("Paladin") || classType.equals("Rangers")){
+           hp = 8 + Die(4) + arr[2];
+        }
+        else if(classType.equals("Sorceror") || classType.equals("Wizard")){
+            hp = 4 + Die(4) + arr[2];
+        }
+        else{
+            hp = 6 + Die(4) + arr[2];
+        }
+    }
     public String getName(){
         return name;
     }
@@ -216,7 +230,7 @@ public class Adventurer{
         return race;
     }
     public String classtype(){
-        return classtype;
+        return classType;
     }
     public int getLevel(){
         return level;
