@@ -16,7 +16,7 @@ public class Adventurer{
         this.name = name;
         AttributeArray();
         this.race = deterRace();
-        this.classtype = classtype;
+        this.classtype = deterClass(attribute);
         this.level = level;
         this.hp = hp;
         this.age = age;
@@ -132,7 +132,44 @@ public class Adventurer{
         return race;
     }
     public String deterClass(int[] arr){
-        if()
+        String detClass = "";
+        if(arr[0]> arr[2]){
+            detClass = "Barbarian";
+        }
+        if(arr[5] > arr[1]){
+            detClass = "Bard";
+        }
+        if(arr[4] > arr[5]){
+            detClass = "Cleric";
+        }
+        if(arr[4] > arr[3]){
+            detClass = "Druid";
+        }
+        if(arr[0] > arr[1]){
+            detClass = "Fighter";
+        }
+        if(arr[1] > arr[4]){
+            detClass = "Monk";
+        }
+        if(arr[0] > arr[5]){
+            detClass = "Paladin";
+        }
+        if(arr[4] > arr[1]) {
+            detClass = "Ranger";
+        }
+        if(arr[1] > arr[3]){
+            detClass = "Rogue";
+        }
+        if(arr[5] > arr[2]){
+            detClass = "Sorceror";
+        }
+        if(arr[5] > arr[4]){
+            detClass = "Warlock";
+        }
+        if(arr[3] > arr[4]){
+            detClass = "Wizard";
+        }
+        return detClass;
     }
     public String getName(){
         return name;
