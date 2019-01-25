@@ -12,6 +12,7 @@ public class Adventurer{
     private int wisdom;
     private int charisma;
     private int[] attribute=new int[6];
+    private int[] attributeMods = new int[6];
     public Adventurer(String name){
         this.name = name;
         AttributeArray();
@@ -170,6 +171,43 @@ public class Adventurer{
             detClass = "Wizard";
         }
         return detClass;
+    }
+    public void AtrributeModifs(int[] arr){
+        for(int i = 0; i < 6; i++){
+            if(arr[i] == 1){
+                attributeMods[i] = -5;
+            }
+            if(arr[i] == 2 || arr[i] == 3){
+                attributeMods[i] = -4;
+            }
+            if(arr[i] == 4 || arr[i] == 5){
+                attributeMods[i] = -3;
+            }
+            if(arr[i] == 6 || arr[i] == 7){
+                attributeMods[i] = -2;
+            }
+            if(arr[i] == 8 || arr[i] == 9){
+                attributeMods[i] = -1;
+            }
+            if(arr[i] == 10 || arr[i] == 11){
+                attributeMods[i] = 0;
+            }
+            if(arr[i] == 12 || arr[i] == 13){
+                attributeMods[i] = 1;
+            }
+            if(arr[i] == 14 || arr[i] == 15){
+                attributeMods[i] = 2;
+            }
+            if(arr[i] == 16 || arr[i] == 17){
+                attributeMods[i] = 3;
+            }
+            if(arr[i] == 18 || arr[i] == 19){
+                attributeMods[i] = 4;
+            }
+            else{
+                attributeMods[i] = 5;
+            }
+        }
     }
     public String getName(){
         return name;
