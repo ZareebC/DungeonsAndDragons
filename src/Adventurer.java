@@ -15,7 +15,12 @@ public class Adventurer{
     private int[] attributeMods = new int[6];
     private int feet;
     private int inch;
+    private int weapon1;
+    private int weapon2;
+    private String[] weapons;
     public Adventurer(String name){
+
+        String[] weapons = {"Longsword", "Mace", "Warhammer", "Shortsword", "Morningstar", "Greatsword", "Dagger", "Rapier", "Quarterstaff", "Light Crossbow", "Nunchaku", "Katana", "Shortbow", "Longbow", "Darts", "Sling", "Trident", "Scimitar"};
         this.name = name;
         AttributeArray();
         this.race = deterRace();
@@ -23,6 +28,7 @@ public class Adventurer{
         this.level = level;
         this.hp = DeterHP(attributeMods);
         this.age = DeterAge(race);
+        DeterHeight();
         this.strength = strength;
         this.dexterity = dexterity;
         this.constitution = constitution;
@@ -267,7 +273,7 @@ public class Adventurer{
         }
         return age;
     }
-    public int DeterHeight(){
+    public void DeterHeight(){
         if(race.equals("Dwarf")){
             feet = randNumTwo(4,5);
             if(feet == 4) {
@@ -345,6 +351,31 @@ public class Adventurer{
             else{
                 inch = randNumTwo(1,6);
             }
+        }
+    }
+    public void pickWeapon(){
+        /*
+        0-Longsword
+        1-Mace
+        2-Warhammer
+        3-Shortsword
+        4-Morningstar
+        5-Greatsword
+        6-Dagger
+        7-Rapoer
+        8-Quarterstaff
+        9-Light Crossbow
+        10-Nunchaku
+        11-Katana
+        12-Shortbow
+        13-Longbow
+        14-Darts
+        15-Sling
+        16-Trident
+        17-Scimitar
+         */
+        if(classType.equals(("Barbarian"))){
+
         }
     }
     public String getName(){
