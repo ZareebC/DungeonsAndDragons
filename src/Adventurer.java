@@ -19,6 +19,8 @@ public class Adventurer{
     private String weapon2;
     private String[] weapons;
     private String[] characterWeapons = new String[2];
+    private int Speed;
+    private int sight;
     public Adventurer(String name){
 
         String[] weapons = {"Longsword", "Mace", "Warhammer", "Shortsword", "Morningstar", "Greatsword", "Dagger", "Rapier", "Quarterstaff", "Light Crossbow", "Nunchaku", "Katana", "Shortbow", "Longbow", "Darts", "Sling", "Trident", "Scimitar"};
@@ -30,6 +32,7 @@ public class Adventurer{
         this.hp = DeterHP(attributeMods);
         this.age = DeterAge(race);
         DeterHeight();
+        DeterSpeed();
         this.strength = strength;
         this.dexterity = dexterity;
         this.constitution = constitution;
@@ -608,6 +611,18 @@ public class Adventurer{
             }
         }
     }
+    public void DeterSpeed(){
+        if(race.equals("Dwarf") || race.equals("Halfling") || race.equals("Gnome")){
+            Speed = 25;
+        }
+        else if(race.equals("Elf")){
+            Speed = 35;
+        }
+        else{
+            Speed = 30;
+        }
+    }
+
     public String getName(){
         return name;
     }
