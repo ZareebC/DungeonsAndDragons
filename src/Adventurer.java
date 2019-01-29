@@ -15,9 +15,10 @@ public class Adventurer{
     private int[] attributeMods = new int[6];
     private int feet;
     private int inch;
-    private int weapon1;
-    private int weapon2;
+    private String weapon1;
+    private String weapon2;
     private String[] weapons;
+    private String[] characterWeapons = new String[2];
     public Adventurer(String name){
 
         String[] weapons = {"Longsword", "Mace", "Warhammer", "Shortsword", "Morningstar", "Greatsword", "Dagger", "Rapier", "Quarterstaff", "Light Crossbow", "Nunchaku", "Katana", "Shortbow", "Longbow", "Darts", "Sling", "Trident", "Scimitar"};
@@ -362,7 +363,7 @@ public class Adventurer{
         4-Morningstar
         5-Greatsword
         6-Dagger
-        7-Rapoer
+        7-Rapier
         8-Quarterstaff
         9-Light Crossbow
         10-Nunchaku
@@ -374,8 +375,237 @@ public class Adventurer{
         16-Trident
         17-Scimitar
          */
+        int rand = 0;
         if(classType.equals(("Barbarian"))){
-
+            for(int i = 0; i < 2; i++) {
+                rand = randNumTwo(1, 6);
+                if (rand == 1) {
+                    characterWeapons[i] = weapons[0];   //Character weapons holds the two weapons
+                }
+                else if (rand == 2) {
+                    characterWeapons[i] = weapons[1];
+                }
+                else if (rand == 3) {
+                    characterWeapons[i] = weapons[2];
+                }
+                else if (rand == 4) {
+                    characterWeapons[i] = weapons[3];
+                }
+                else if (rand == 5) {
+                    characterWeapons[i] = weapons[4];
+                }
+                else {
+                    characterWeapons[i] = weapons[5];
+                }
+            }
+        }
+        else if(classType.equals("Bard")){
+            for(int i = 0; i < 2; i++) {
+                rand = randNumTwo(1, 7);
+                if (rand == 1) {
+                    characterWeapons[i] = weapons[6];   //Character weapons holds the two weapons
+                }
+                else if (rand == 2) {
+                    characterWeapons[i] = weapons[7];
+                }
+                else if (rand == 3) {
+                    characterWeapons[i] = weapons[3];
+                }
+                else if (rand == 4) {
+                    characterWeapons[i] = weapons[0];
+                }
+                else if (rand == 5) {
+                    characterWeapons[i] = weapons[8];
+                }
+                else {
+                    characterWeapons[i] = weapons[9];
+                }
+            }
+        }
+        else if(classType.equals("Cleric")){
+            for(int i = 0; i < 2; i++) {
+                rand = randNumTwo(1, 4);
+                if (rand == 1) {
+                    characterWeapons[i] = weapons[6];   //Character weapons holds the two weapons
+                }
+                else if (rand == 2) {
+                    characterWeapons[i] = weapons[14];
+                }
+                else if (rand == 3) {
+                    characterWeapons[i] = weapons[15];
+                }
+                else {
+                    characterWeapons[i] = weapons[8];
+                }
+            }
+        }
+        else if(classType.equals("Druid")){
+            for(int i = 0; i < 2; i++) {
+                rand = randNumTwo(1, 7);
+                if (rand == 1) {
+                    characterWeapons[i] = weapons[6];   //Character weapons holds the two weapons
+                }
+                else if (rand == 2) {
+                    characterWeapons[i] = weapons[14];
+                }
+                else if (rand == 3) {
+                    characterWeapons[i] = weapons[15];
+                }
+                else if(rand == 4){
+                    characterWeapons[i] = weapons[8];
+                }
+                else if(rand == 5){
+                    characterWeapons[i] = weapons[16];
+                }
+                else if(rand == 6){
+                    characterWeapons[i] = weapons[1];
+                }
+                else{
+                    characterWeapons[i] = weapons[17];
+                }
+            }
+        }
+        else if(classType.equals("Fighter")){
+            for(int i = 0; i < 2; i++) {
+                rand = randNumTwo(1, 6);
+                if (rand == 1) {
+                    characterWeapons[i] = weapons[0];   //Character weapons holds the two weapons
+                }
+                else if (rand == 2) {
+                    characterWeapons[i] = weapons[1];
+                }
+                else if (rand == 3) {
+                    characterWeapons[i] = weapons[2];
+                }
+                else if(rand == 4){
+                    characterWeapons[i] = weapons[3];
+                }
+                else if(rand == 5){
+                    characterWeapons[i] = weapons[4];
+                }
+                else{
+                    characterWeapons[i] = weapons[5];
+                }
+            }
+        }
+        else if(classType.equals("Monk")){
+            for(int i = 0; i < 2; i++) {
+                rand = randNumTwo(1, 3);
+                if (rand == 1) {
+                    characterWeapons[i] = weapons[8];   //Character weapons holds the two weapons
+                }
+                else if (rand == 2) {
+                    characterWeapons[i] = weapons[10];
+                }
+                else {
+                    characterWeapons[i] = weapons[11];
+                }
+            }
+        }
+        else if(classType.equals("Paladin")){
+            for(int i = 0; i < 2; i++) {
+                rand = randNumTwo(1, 4);
+                if (rand == 1) {
+                    characterWeapons[i] = weapons[0];   //Character weapons holds the two weapons
+                }
+                else if (rand == 2) {
+                    characterWeapons[i] = weapons[1];
+                }
+                else if (rand == 3) {
+                    characterWeapons[i] = weapons[2];
+                }
+                else {
+                    characterWeapons[i] = weapons[3];
+                }
+            }
+        }
+        else if(classType.equals("Ranger")){
+            for(int i = 0; i < 2; i++) {
+                rand = randNumTwo(1, 4);
+                if (rand == 1) {
+                    characterWeapons[i] = weapons[13];   //Character weapons holds the two weapons
+                }
+                else if (rand == 2) {
+                    characterWeapons[i] = weapons[12];
+                }
+                else if (rand == 3) {
+                    characterWeapons[i] = weapons[9];
+                }
+                else {
+                    characterWeapons[i] = weapons[0];
+                }
+            }
+        }
+        else if(classType.equals("Rogue")){
+            for(int i = 0; i < 2; i++) {
+                rand = randNumTwo(1, 4);
+                if (rand == 1) {
+                    characterWeapons[i] = weapons[6];   //Character weapons holds the two weapons
+                }
+                else if (rand == 2) {
+                    characterWeapons[i] = weapons[7];
+                }
+                else if (rand == 3) {
+                    characterWeapons[i] = weapons[3];
+                }
+                else {
+                    characterWeapons[i] = weapons[0];
+                }
+            }
+        }
+        else if(classType.equals("Sorcerer")){
+            for(int i = 0; i < 2; i++) {
+                rand = randNumTwo(1, 4);
+                if (rand == 1) {
+                    characterWeapons[i] = weapons[6];   //Character weapons holds the two weapons
+                }
+                else if (rand == 2) {
+                    characterWeapons[i] = weapons[14];
+                }
+                else if (rand == 3) {
+                    characterWeapons[i] = weapons[15];
+                }
+                else {
+                    characterWeapons[i] = weapons[8];
+                }
+            }
+        }
+        else if(classType.equals("Warlock")){
+            for(int i = 0; i < 2; i++) {
+                rand = randNumTwo(1, 5);
+                if (rand == 1) {
+                    characterWeapons[i] = weapons[6];   //Character weapons holds the two weapons
+                }
+                else if (rand == 2) {
+                    characterWeapons[i] = weapons[14];
+                }
+                else if (rand == 3) {
+                    characterWeapons[i] = weapons[15];
+                }
+                else if(rand == 4){
+                    characterWeapons[i] = weapons[8];
+                }
+                else{
+                    characterWeapons[i] = weapons[17];
+                }
+            }
+        }
+        else{   //Wizard
+            for(int i = 0; i < 2; i++) {
+                rand = randNumTwo(1, 4);
+                if (rand == 1) {
+                    characterWeapons[i] = weapons[6];   //Character weapons holds the two weapons
+                }
+                else if (rand == 2) {
+                    characterWeapons[i] = weapons[14];
+                }
+                else if (rand == 3) {
+                    characterWeapons[i] = weapons[15];
+                }
+                else {
+                    characterWeapons[i] = weapons[8];
+                }
+            }
         }
     }
     public String getName(){
