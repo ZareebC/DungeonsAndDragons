@@ -33,6 +33,7 @@ public class Adventurer{
         this.age = DeterAge(race);
         DeterHeight();
         DeterSpeed();
+        DeterSight();
         this.strength = strength;
         this.dexterity = dexterity;
         this.constitution = constitution;
@@ -622,7 +623,14 @@ public class Adventurer{
             Speed = 30;
         }
     }
-
+    public void DeterSight(){
+        if(race.equals("Halfling") || race.equals("Human") || race.equals("Half-Orc")){
+            sight = 30;
+        }
+        else{
+            sight = 60;
+        }
+    }
     public String getName(){
         return name;
     }
