@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 public class Adventurer{
     private String name;
     private String race;
@@ -15,13 +17,11 @@ public class Adventurer{
     private int[] attributeMods = new int[6];
     private int feet;
     private int inch;
-    private String[] weapons;
+    private String[] weapons ={"Longsword", "Mace", "Warhammer", "Shortsword", "Morningstar", "Greatsword", "Dagger", "Rapier", "Quarterstaff", "Light Crossbow", "Nunchaku", "Katana", "Shortbow", "Longbow", "Darts", "Sling", "Trident", "Scimitar"};
     private String[] characterWeapons = new String[2];
     private int Speed;
     private int sight;
     public Adventurer(String name){
-
-        String[] weapons = {"Longsword", "Mace", "Warhammer", "Shortsword", "Morningstar", "Greatsword", "Dagger", "Rapier", "Quarterstaff", "Light Crossbow", "Nunchaku", "Katana", "Shortbow", "Longbow", "Darts", "Sling", "Trident", "Scimitar"};
         this.name = name;
         this.race = deterRace();
         AttributeArray();
@@ -39,6 +39,7 @@ public class Adventurer{
         this.wisdom = wisdom;
         this.charisma = charisma;
         AttributeModifs(attribute);
+        pickWeapon();
     }
     public int Die(int n){
         int rand = (int)(Math.random()*n)+1;
@@ -359,6 +360,7 @@ public class Adventurer{
         }
     }
     public void pickWeapon(){
+
         /*
         0-Longsword
         1-Mace
@@ -678,5 +680,8 @@ public class Adventurer{
     }
     public int getSight(){
         return sight;
+    }
+    public String getWeapons(int i){
+        return characterWeapons[i];
     }
 }

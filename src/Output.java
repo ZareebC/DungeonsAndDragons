@@ -16,6 +16,9 @@ public class Output{
         System.out.println("Intelligence: " + guy.getAttribute(3) + "\tModifier: " + guy.getAttributeMods(3));
         System.out.println("Wisdom: " + guy.getAttribute(4) + "\tModifier: " + guy.getAttributeMods(4));
         System.out.println("Charisma: " + guy.getAttribute(5) + "\tModifier: " + guy.getAttributeMods(5));
+        Line();
+        System.out.println("Weapon List:");
+        System.out.println("Weapon One: " + guy.getWeapons(0) + "\tWeapon Two: " + guy.getWeapons(1));
     }
     public void Line(){
         System.out.println("++++++++++++++++");
