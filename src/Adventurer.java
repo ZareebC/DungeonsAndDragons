@@ -150,6 +150,7 @@ public class Adventurer{
     }
 
     public String deterClass(int[] arr){
+        int rand = randNumTwo(1, 12);
         String detClass = "";
         //0 - Strength
         //1 - Dexterity
@@ -192,6 +193,22 @@ public class Adventurer{
         }
         else if((arr[3]> arr[0]) && (arr[3]> arr[1]) && (arr[3]> arr[2]) && (arr[3]> arr[4]) && (arr[3]> arr[5]) && (arr[4]> arr[0]) && (arr[4]> arr[1]) && (arr[4]> arr[2]) && (arr[4] > arr[5])){
             detClass = "Wizard";
+        }
+        else{
+            switch(rand){
+                case 1: detClass = "Barbarian"; break;
+                case 2: detClass = "Bard"; break;
+                case 3: detClass = "Cleric"; break;
+                case 4: detClass = "Druid"; break;
+                case 5: detClass = "Fighter"; break;
+                case 6: detClass = "Monk"; break;
+                case 7: detClass = "Paladin"; break;
+                case 8: detClass = "Ranger"; break;
+                case 9: detClass = "Rogue"; break;
+                case 10: detClass = "Sorceror"; break;
+                case 11: detClass = "Warlock"; break;
+                default: detClass = "Wizard"; break;
+            }
         }
         return detClass;
     }

@@ -21,7 +21,7 @@ public class Output{
         System.out.println("Weapon One: " + guy.getWeapons(0) + "\tWeapon Two: " + guy.getWeapons(1));
     }
     public void Line(){
-        System.out.println("++++++++++++++++");
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++");
     }
 }
 
