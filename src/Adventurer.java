@@ -650,6 +650,9 @@ public class Adventurer{
             sight = 60;
         }
     }
+    public void ASCII(String c){
+      System.out.println("iiiiii");
+    }
     public String getName(){
         return name;
     }
@@ -700,5 +703,14 @@ public class Adventurer{
     }
     public String getWeapons(int i){
         return characterWeapons[i];
+    }
+    public int getFeet(){
+       return feet;
+    }
+    public int getInch(){
+        return inch;
+    }
+    public void getASCII(){
+        ASCII(classType);
     }
 }
