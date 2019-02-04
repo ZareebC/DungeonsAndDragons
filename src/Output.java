@@ -12,12 +12,12 @@ public class Output{
         System.out.println("Hit Points: " + guy.getHP());
         System.out.println("Height: " + guy.getFeet() + "'" + " " + guy.getInch() + "\"");
         ASCII();
-        System.out.println("Strength: " + guy.getAttribute(0) + "\tModifier: " + guy.getAttributeMods(0));
-        System.out.println("Dexterity: " + guy.getAttribute(1) + "\tModifier: " + guy.getAttributeMods(1));
+        System.out.println("Strength: " + guy.getAttribute(0) + "   \t\tModifier: " + guy.getAttributeMods(0));
+        System.out.println("Dexterity: " + guy.getAttribute(1) + "\t\tModifier: " + guy.getAttributeMods(1));
         System.out.println("Constitution: " + guy.getAttribute(2) + "\tModifier: " + guy.getAttributeMods(2));
-        System.out.println("Intelligence: " + guy.getAttribute(3) + "\tModifier: " + guy.getAttributeMods(3));
-        System.out.println("Wisdom: " + guy.getAttribute(4) + "\tModifier: " + guy.getAttributeMods(4));
-        System.out.println("Charisma: " + guy.getAttribute(5) + "\tModifier: " + guy.getAttributeMods(5));
+        System.out.println("Intelligence: " + guy.getAttribute(3) + "\t\tModifier: " + guy.getAttributeMods(3));
+        System.out.println("Wisdom: " + guy.getAttribute(4) + "\t\t\tModifier: " + guy.getAttributeMods(4));
+        System.out.println("Charisma: " + guy.getAttribute(5) + "\t\tModifier: " + guy.getAttributeMods(5));
         ASCII();
         System.out.println("Weapon List:");
         System.out.println("Weapon One: " + guy.getWeapons(0) + "\tWeapon Two: " + guy.getWeapons(1));
