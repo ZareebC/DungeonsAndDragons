@@ -2,6 +2,7 @@ public class Output{
     private String classT;
     public Output(Adventurer guy){
         classT = guy.ClassType();
+        ASCII();
         System.out.println("Name: " + guy.getName());
         System.out.println("Race: " + guy.getRace());
         System.out.println("Age: " + guy.getAge());
